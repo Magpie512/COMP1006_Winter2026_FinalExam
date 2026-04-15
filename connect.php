@@ -4,7 +4,7 @@ if(session_status() === PHP_SESSION_NONE) {
 }
 
 $host = "127.0.0.1"; // LH
-$db = "trollpost"; //database name
+$db = "image_gallery"; //database name
 $user = "root"; //username
 $password = ""; //password
 
