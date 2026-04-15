@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Gallery';
-require_once 'db.php';
+require_once 'connect.php';
 
 if (empty($_SESSION['admin_id'])) {
     header('Location: login.php');
@@ -101,7 +101,7 @@ $stmt = $pdo->query('SELECT images.id, images.title, images.file_path, admins.us
                      ORDER BY images.created_at DESC');
 $images = $stmt->fetchAll();
 ?>
-<?php include 'partials/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <h1>Image Gallery</h1>
 
