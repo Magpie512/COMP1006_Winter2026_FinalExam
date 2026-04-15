@@ -26,7 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<?php include 'partials/header.php'; ?>
+
+<?php include 'header.php'; ?>
 
 <h1>Login</h1>
 
