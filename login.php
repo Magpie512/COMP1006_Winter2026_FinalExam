@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($admin && password_verify($password, $admin['password_hash'])) {
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['username'] = $admin['username'];
-            header('Location: gallery.php');
+            header('Location: index.php');
             exit;
         } else {
             $errors[] = 'Invalid username or password.';

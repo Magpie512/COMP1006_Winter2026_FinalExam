@@ -2,11 +2,6 @@
 $pageTitle = 'Gallery';
 require_once 'connect.php';
 
-if (empty($_SESSION['admin_id'])) {
-    header('Location: login.php');
-    exit;
-}
-
 $errors = [];
 $success = '';
 
@@ -114,7 +109,7 @@ $images = $stmt->fetchAll();
 <?php endforeach; ?>
 
 <h2>Upload New Image</h2>
-<form method="post" action="gallery.php" enctype="multipart/form-data" novalidate>
+<form method="post" action="index.php" enctype="multipart/form-data" novalidate>
     <label>Title:
         <input type="text" name="title" value="<?= htmlspecialchars($_POST['title'] ?? '') ?>">
     </label><br>
